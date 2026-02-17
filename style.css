@@ -1,3 +1,4 @@
+/* --- ส่วนพื้นฐาน --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +12,7 @@ body {
     line-height: 1.6;
 }
 
+/* --- Navigation --- */
 nav {
     background: white;
     padding: 15px 0;
@@ -33,6 +35,12 @@ nav {
     font-size: 1.6rem;
     font-weight: 600;
     color: #2c3e50;
+}
+
+/* แก้ไข: เอาเส้นใต้ link ใน logo ออก และให้ใช้สีเดิม */
+.logo a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .logo span {
@@ -59,6 +67,7 @@ nav ul li a:hover, nav ul li a.active {
     color: #007bff;
 }
 
+/* --- Hero Section --- */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                 url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470');
@@ -93,6 +102,7 @@ nav ul li a:hover, nav ul li a.active {
     background: #0056b3;
 }
 
+/* --- Layout & Headers --- */
 .container {
     max-width: 1100px;
     margin: 40px auto;
@@ -120,6 +130,7 @@ nav ul li a:hover, nav ul li a.active {
     margin: 10px auto;
 }
 
+/* --- Grid & Cards --- */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -171,6 +182,34 @@ nav ul li a:hover, nav ul li a.active {
     color: #666;
 }
 
+/* --- ส่วนที่เพิ่มใหม่สำหรับหน้าอุปกรณ์ --- */
+.badge {
+    display: inline-block;
+    background: #e7f3ff;
+    color: #007bff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.btn-detail {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    text-decoration: underline;
+    padding-left: 5px; /* เพิ่มลูกเล่นนิดหน่อยเวลา Hover */
+}
+
+/* --- Footer --- */
 footer {
     background: #2c3e50;
     color: #bdc3c7;
@@ -179,6 +218,7 @@ footer {
     margin-top: 60px;
 }
 
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2rem;
