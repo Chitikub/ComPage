@@ -1,0 +1,229 @@
+/* --- Minimal System Variables --- */
+:root {
+  --primary: #007aff;
+  --bg: #ffffff;
+  --gray-light: #f5f5f7;
+  --text-main: #1d1d1f;
+  --text-sub: #86868b;
+  --border: #d2d2d7;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Global Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* --- Navigation (ล็อคไว้ด้านบนให้เหมือนกันทุกหน้า) --- */
+nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-left: 24px;
+}
+nav ul li a {
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary);
+}
+
+/* --- Hero & Page Headers --- */
+.hero {
+  height: 80vh;
+  background: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 64px; /* กันโดน nav ทับ */
+}
+
+.sub-header,
+.page-header {
+  padding: 120px 20px 40px;
+  text-align: center;
+  background: var(--bg);
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.hero h1 {
+  font-size: 3.5rem;
+}
+.sub-header h2 {
+  font-size: 2.5rem;
+}
+
+/* --- Layout System --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* --- Minimal Card Style --- */
+.card {
+  background: var(--gray-light);
+  border-radius: 20px;
+  padding: 32px;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  background: var(--bg);
+  border-color: var(--border);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.icon-box {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+/* --- Buttons --- */
+.btn-primary,
+.btn-secondary {
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+.btn-secondary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* --- Info Section (หน้า Index) --- */
+.info-section {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin: 80px 0;
+}
+
+.info-text {
+  flex: 1;
+}
+.info-image {
+  flex: 1;
+}
+.info-image img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+/* --- Footer --- */
+footer {
+  padding: 80px 0 40px;
+  background: #fdfdfd;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-links a {
+  color: var(--text-sub);
+}
+
+/* --- Responsive (มือถือ) --- */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  nav {
+    height: auto;
+    position: relative;
+  }
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+    margin-top: 0;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .info-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    margin-top: 15px;
+  }
+  nav ul li {
+    margin: 0 10px;
+  }
+}

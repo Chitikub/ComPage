@@ -1,96 +1,82 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Master - Learning</title>
+    <title>PC Master - Learning Center</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <nav>
         <div class="nav-container">
-            <div class="logo"><a href="index.html">PC<span>Master</span></a></div>
+            <div class="logo"><a href="index.html">MR.<span>Master</span></a></div>
             <ul>
                 <li><a href="index.html">หน้าแรก</a></li>
                 <li><a href="computer.equipment.html">อุปกรณ์คอมพิวเตอร์</a></li>
-                <li><a href="components.html">ส่วนประกอบ</a></li>
+                <li><a href="components.html">ส่วนประกอบภายใน</a></li>
                 <li><a href="connect.html">การเชื่อมต่อ</a></li>
+                <li><a href="learning.html" >แหล่งเรียนรู้</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero"
-        style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1470');">
-        <div class="hero-content">
-            <h1>ศูนย์การเรียนรู้เพิ่มเติม</h1>
-            <p>แหล่งรวมบทความและเทคนิคขั้นสูงสำหรับการใช้งานคอมพิวเตอร์</p>
-        </div>
+    <header class="sub-header">
+        <h2>ศูนย์การเรียนรู้เพิ่มเติม</h2>
+        <p>ข้อมูลเชิงลึกและเทคนิคการดูแลรักษาคอมพิวเตอร์</p>
     </header>
 
     <main class="container">
-        <section class="sub-header">
-            <h2>บทเรียนแนะนำ</h2>
-            <p>อัพสกิลความรู้ด้านไอทีของคุณไปอีกขั้น</p>
+        <section class="grid">
+            <div class="card" onclick="location.href='#maintenance'">
+                <div class="card-body">
+                    <div class="icon-box">🧹</div>
+                    <h3>การดูแลรักษา</h3>
+                    <p>วิธีทำความสะอาด Hardware อย่างถูกวิธี</p>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='#troubleshoot'">
+                <div class="card-body">
+                    <div class="icon-box">🔧</div>
+                    <h3>แก้ปัญหาเบื้องต้น</h3>
+                    <p>วิธีรับมือเมื่อคอมเปิดไม่ติดหรือจอฟ้า</p>
+                </div>
+            </div>
         </section>
 
-        <section class="grid">
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1470" alt="Overclocking">
-                </div>
-                <div class="card-body">
-                    <h3>Overclocking 101</h3>
-                    <p>เรียนรู้วิธีการรีดประสิทธิภาพ CPU และ RAM ของคุณให้ถึงขีดสุดอย่างปลอดภัย</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม &rarr;</a>
-                </div>
+        <section id="maintenance" style="margin-top: 80px; padding-top: 60px;">
+            <h2 style="border-left: 5px solid #007aff; padding-left: 15px; margin-bottom: 20px;">1. การดูแลรักษา Hardware</h2>
+            <div class="card" style="text-align: left; background: #fff;">
+                <p><strong>การทำความสะอาดภายใน:</strong> ควรใช้ลมเป่า (Air Duster) ไล่ฝุ่นอย่างน้อยทุก 6 เดือน โดยเฉพาะบริเวณพัดลม CPU และ GPU เพื่อป้องกันความร้อนสะสม</p>
+                <br>
+                <p><strong>การเปลี่ยนซิลิโคน (Thermal Paste):</strong> หากใช้งานหนักหรือเครื่องมีอายุเกิน 2 ปี ควรเช็คความร้อน ถ้าพุ่งสูงเกิน 90°C ควรทำความสะอาดและทาซิลิโคนใหม่</p>
+                <br>
+                <p><strong>ความสะอาดภายนอก:</strong> ใช้ผ้าไมโครไฟเบอร์เช็ดหน้าจอ และใช้เครื่องดูดฝุ่นขนาดเล็กดูดเศษขยะในคีย์บอร์ด</p>
             </div>
+        </section>
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=1470"
-                        alt="Maintenance">
-                </div>
-                <div class="card-body">
-                    <h3>การดูแลรักษาคอมพิวเตอร์</h3>
-                    <p>เทคนิคการทำความสะอาดและดูแลรักษา Hardware ให้อยู่กับเราไปนานๆ</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม &rarr;</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1470" alt="Coding Setup">
-                </div>
-                <div class="card-body">
-                    <h3>จัดตอมสำหรับเขียนโปรแกรม</h3>
-                    <p>แนวทางการเลือกสเปคคอมพิวเตอร์สำหรับ Developer และ Programmer</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม &rarr;</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=1474"
-                        alt="Troubleshooting">
-                </div>
-                <div class="card-body">
-                    <h3>แก้ปัญหาเบื้องต้น</h3>
-                    <p>รวมวิธีแก้ปัญหาคอมพิวเตอร์เปิดไม่ติด จอฟ้า หรือเครื่องช้าด้วยตัวเอง</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม &rarr;</a>
-                </div>
+        <section id="troubleshoot" style="margin-top: 80px; padding-top: 60px;">
+            <h2 style="border-left: 5px solid #007aff; padding-left: 15px; margin-bottom: 20px;">2. การแก้ปัญหาคอมพิวเตอร์เบื้องต้น</h2>
+            <div class="card" style="text-align: left; background: #fff;">
+                <p><strong>อาการ: เปิดเครื่องติดแต่ภาพไม่ขึ้น</strong></p>
+                <ul>
+                    <li>ลองถอด RAM ออกมาแล้วใช้ยางลบสะอาดเช็ดบริเวณแถบทองแดงเบาๆ แล้วเสียบกลับเข้าไปใหม่</li>
+                    <li>เช็คสายเชื่อมต่อจอภาพ (HDMI/DisplayPort) ว่าเสียบแน่นหรือเสียบถูกช่อง (ควรเสียบที่การ์ดจอ)</li>
+                </ul>
+                <br>
+                <p><strong>อาการ: จอฟ้า (Blue Screen of Death)</strong></p>
+                <ul>
+                    <li>จดโค้ด Error ที่ปรากฏ (เช่น 0x000...) ไปค้นหาใน Google</li>
+                    <li>ส่วนใหญ่มักเกิดจาก Driver ไม่สมบูรณ์ หรือ Hardware บางชิ้นเริ่มมีปัญหา (มักเป็นที่ RAM หรือ SSD)</li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Computer Hardware Knowledge Hub</p>
-        <span>By Chitipat && Wanchai && Satayu</span>
+        <p>&copy; 2026 PC Master Hub | By Chitipat & Wanchai & Satayu</p>
     </footer>
 
 </body>
-
 </html>
