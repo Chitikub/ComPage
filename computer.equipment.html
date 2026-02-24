@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <nav>
@@ -29,88 +27,155 @@
 
     <main class="container">
         <div class="grid">
-
-            <div class="card">
+            <div class="card" onclick="showInfo('monitor')">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1470" alt="Monitor">
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1470" alt="Modern Monitor0" alt="Monitor">
                 </div>
                 <div class="card-body">
                     <span class="badge">Output Device</span>
                     <h3>Monitor (หน้าจอ)</h3>
-                    <p>แสดงผลภาพจากคอมพิวเตอร์ มีหลายขนาดและเทคโนโลยี เช่น IPS, VA และอัตรา Refresh Rate
-                        ที่สูงสำหรับเกมเมอร์</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม →</a>
+                    <p>แสดงผลภาพจากคอมพิวเตอร์ มีหลายขนาดและเทคโนโลยี</p>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=1374" alt="CPU">
-                </div>
-                <div class="card-body">
-                    <span class="badge">Internal Component</span>
-                    <h3>Processor (CPU)</h3>
-                    <p>สมองของคอมพิวเตอร์ ทำหน้าที่ประมวลผลคำสั่งจากซอฟต์แวร์และฮาร์ดแวร์อื่นๆ ภายในระบบ</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม →</a>
-                </div>
-            </div>
-
-            <div class="card">
+            <div class="card" onclick="showInfo('keyboard')">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=1470" alt="Keyboard">
                 </div>
                 <div class="card-body">
                     <span class="badge">Input Device</span>
                     <h3>Keyboard (คีย์บอร์ด)</h3>
-                    <p>อุปกรณ์สำหรับป้อนข้อมูลตัวอักษรและคำสั่ง มีทั้งแบบปกติและ Mechanical ที่ทนทานกว่า</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม →</a>
+                    <p>อุปกรณ์สำหรับป้อนข้อมูลตัวอักษรและคำสั่งต่างๆ</p>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="showInfo('mouse')">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=1470" alt="Mouse">
+                    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=1470" alt="Mouse">
                 </div>
                 <div class="card-body">
                     <span class="badge">Input Device</span>
                     <h3>Mouse (เมาส์)</h3>
-                    <p>ใช้ควบคุมตัวชี้บนหน้าจอเพื่อเลือกและใช้งานโปรแกรมต่างๆ มีทั้งแบบมีสายและไร้สาย</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม →</a>
+                    <p>ใช้ควบคุมตัวชี้บนหน้าจอเพื่อเลือกและใช้งานโปรแกรม</p>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="showInfo('microphone')">
                 <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1470" alt="Headset">
+                    <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1470" alt="Microphone">
                 </div>
                 <div class="card-body">
-                    <span class="badge">Audio Device</span>
-                    <h3>Headset (หูฟัง)</h3>
-                    <p>อุปกรณ์สำหรับฟังเสียงและสื่อสารผ่านไมโครโฟน จำเป็นมากสำหรับการประชุมและเล่นเกม</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม →</a>
+                    <span class="badge">Input Device</span>
+                    <h3>Microphone (ไมโครโฟน)</h3>
+                    <p>อุปกรณ์รับสัญญาณเสียงเพื่อบันทึกหรือใช้สื่อสาร</p>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="showInfo('webcam')">
+                <div class="card-img">
+                    <img src="https://www.ec-mall.com/media/catalog/product/cache/9e060b1b3b357cb140b27d2b51b02644/L/o/Logitech-BRIO-Ultra-HD-Pro-Webcam-1.webp" alt="Webcam">
+                </div>
+                <div class="card-body">
+                    <span class="badge">Input Device</span>
+                    <h3>Webcam (เว็บแคม)</h3>
+                    <p>กล้องบันทึกวิดีโอสำหรับการประชุมหรือการสตรีมมิ่ง</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="showInfo('audio_out')">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1470" alt="Audio">
+                </div>
+                <div class="card-body">
+                    <span class="badge">Output Device</span>
+                    <h3>Speakers/Headphones</h3>
+                    <p>อุปกรณ์แสดงผลเสียง ทั้งแบบสวมหัวและลำโพง</p>
+                </div>
+            </div>
+
+            <div class="card" onclick="showInfo('printer')">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=1470" alt="Printer">
                 </div>
                 <div class="card-body">
                     <span class="badge">Output Device</span>
                     <h3>Printer (เครื่องพิมพ์)</h3>
-                    <p>ใช้สำหรับพิมพ์เอกสารหรือรูปภาพจากคอมพิวเตอร์ลงบนกระดาษ มีทั้งระบบ Inkjet และ Laser</p>
-                    <a href="#" class="btn-detail">อ่านเพิ่มเติม →</a>
+                    <p>ใช้พิมพ์เอกสารหรือรูปภาพจากคอมพิวเตอร์ลงกระดาษ</p>
                 </div>
             </div>
-
         </div>
     </main>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2026 Computer Hardware Knowledge Hub</p>
         <span>By Chitipat && Wanchai && Satayu</span>
     </footer>
 
-</body>
+    <script>
+        const data = {
+            'monitor': {
+                title: 'Monitor (จอภาพ)',
+                img: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1470" alt="Modern Monitor',
+                desc: 'อุปกรณ์แสดงผลหลักที่เปลี่ยนสัญญาณไฟฟ้าเป็นภาพ ปัจจุบันมีความละเอียดสูงระดับ 4K และเทคโนโลยีหน้าจอแบบ IPS ที่ให้สีสันสมจริง'
+            },
+            'keyboard': {
+                title: 'Keyboard (คีย์บอร์ด)',
+                img: 'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=1470',
+                desc: 'อุปกรณ์ป้อนข้อมูลตัวอักษรและชุดคำสั่ง มีทั้งแบบปกติและแบบ Mechanical ที่ออกแบบมาเพื่อการพิมพ์ที่รวดเร็วและทนทาน'
+            },
+            'mouse': {
+                title: 'Mouse (เมาส์)',
+                img: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=1470',
+                desc: 'อุปกรณ์ชี้ตำแหน่งที่ช่วยให้การสั่งงานคอมพิวเตอร์สะดวกขึ้น มีทั้งระบบใช้สายและไร้สาย รวมถึงเมาส์สำหรับเล่นเกม (Gaming Mouse)'
+            },
+            'microphone': {
+                title: 'Microphone (ไมโครโฟน)',
+                img: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1470',
+                desc: 'อุปกรณ์รับสัญญาณเสียงเปลี่ยนเป็นข้อมูลดิจิทัล เหมาะสำหรับการประชุมออนไลน์ การแคสเกม หรือการทำ Podcast'
+            },
+            'webcam': {
+                title: 'Webcam (เว็บแคม)',
+                img: 'https://www.ec-mall.com/media/catalog/product/cache/9e060b1b3b357cb140b27d2b51b02644/L/o/Logitech-BRIO-Ultra-HD-Pro-Webcam-1.webp',
+                desc: 'กล้องบันทึกวิดีโอแบบพกพาที่ช่วยให้สามารถสื่อสารแบบเห็นหน้าได้ทั่วโลก มีความละเอียดตั้งแต่ HD ไปจนถึง 4K'
+            },
+            'audio_out': {
+                title: 'Speakers & Headphones',
+                img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1470',
+                desc: 'อุปกรณ์ที่ทำหน้าที่เปลี่ยนข้อมูลเสียงเป็นคลื่นเสียง ลำโพงเหมาะสำหรับการฟังในพื้นที่กว้าง ส่วนหูฟังให้ความเป็นส่วนตัวสูง'
+            },
+            'printer': {
+                title: 'Printer (เครื่องพิมพ์)',
+                img: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=1470',
+                desc: 'อุปกรณ์แสดงผลในรูปแบบเอกสาร มีทั้งระบบ Inkjet (พ่นหมึก) และ Laser (ความร้อน) ตามลักษณะการใช้งาน'
+            }
+        };
 
+        function showInfo(id) {
+            const modal = document.getElementById('infoModal');
+            const body = document.getElementById('modal-body');
+            body.innerHTML = `
+                <img src="${data[id].img}" class="modal-img" style="max-height: 300px; object-fit: cover;">
+                <h2>${data[id].title}</h2>
+                <p style="text-align:left; margin-top:15px; line-height:1.8;">${data[id].desc}</p>
+            `;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('infoModal');
+            if (event.target == modal) closeModal();
+        }
+    </script>
+</body>
 </html>

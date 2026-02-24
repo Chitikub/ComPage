@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Master - Home</title>
+    <title>PC Master - เจาะลึกโลก Hardware</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <nav>
         <div class="nav-container">
-            <div class="logo">PC<span>Master</span></div>
+            <div class="logo"><a href="index.html">PC<span>Master</span></a></div>
             <ul>
                 <li><a href="index.html" class="active">หน้าแรก</a></li>
-                <li><a href="computer.equipment.html">อุปกรณ์คอมพิวเตอร์</a></li>
-                <li><a href="components.html">ส่วนประกอบ</a></li>
+                <li><a href="computer.equipment.html">อุปกรณ์ต่อพ่วง</a></li>
+                <li><a href="components.html">ส่วนประกอบภายใน</a></li>
                 <li><a href="connect.html">การเชื่อมต่อ</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>เจาะลึกโลกคอมพิวเตอร์</h1>
-            <p>รวมทุกความรู้เกี่ยวกับอุปกรณ์ Hardware และเทคโนโลยีที่คุณควรรู้</p>
-            <a href="learning.html" class="btn-primary">เริ่มต้นเรียนรู้</a>
+            <p>รวมทุกความรู้เกี่ยวกับ Hardware และเทคโนโลยีที่คุณควรรู้ในปี 2026</p>
+            <div class="hero-btns">
+                <a href="computer.equipment.html" class="btn-primary">เริ่มต้นเรียนรู้</a>
+            </div>
         </div>
     </header>
 
     <main class="container">
         <section class="grid">
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <span style="font-size: 3rem;">🚀</span>
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="icon-box">🚀</div>
                     <h3>ประสิทธิภาพ</h3>
-                    <p>เรียนรู้วิธีการเลือกอุปกรณ์เพื่อความเร็วสูงสุด</p>
+                    <p>วิธีการเลือก CPU และ GPU ให้เหมาะกับการใช้งานหนักๆ และการเล่นเกมระดับสูง</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <span style="font-size: 3rem;">🛠️</span>
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="icon-box">🛠️</div>
                     <h3>การติดตั้ง</h3>
-                    <p>พื้นฐานการประกอบคอมพิวเตอร์อย่างมืออาชีพ</p>
+                    <p>คู่มือประกอบคอมพิวเตอร์ทีละขั้นตอน ตั้งแต่เลือกเคสไปจนถึงการจัดสายไฟ</p>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <span style="font-size: 3rem;">💡</span>
-                    <h3>ความรู้ใหม่</h3>
-                    <p>อัปเดตเทคโนโลยี Hardware ล่าสุดประจำปี 2026</p>
+            <div class="card feature-card">
+                <div class="card-body">
+                    <div class="icon-box">💡</div>
+                    <h3>เทคโนโลยีใหม่</h3>
+                    <p>อัปเดตข่าวสารเกี่ยวกับ AI Hardware และเทคโนโลยีการจัดเก็บข้อมูลยุคใหม่</p>
                 </div>
             </div>
         </section>
 
-        <section class="sub-header" style="margin-top: 50px;">
-            <h2>ความสำคัญของ Hardware</h2>
-            <p>Hardware คือส่วนประกอบทางกายภาพที่ทำงานร่วมกับซอฟต์แวร์เพื่อให้คอมพิวเตอร์ทำงานได้อย่างมีประสิทธิภาพ</p>
+        <section class="info-section">
+            <div class="info-text">
+                <h2>ทำไม Hardware ถึงสำคัญ?</h2>
+                <p>Hardware คือ "ร่างกาย" ของคอมพิวเตอร์ ถ้าปราศจากส่วนประกอบที่ดี ซอฟต์แวร์ที่ฉลาดแค่ไหนก็ไม่สามารถทำงานได้เต็มศักยภาพ การเลือก Hardware ที่ถูกต้องจะช่วยยืดอายุการใช้งานและประหยัดงบประมาณในระยะยาว</p>
+            </div>
+            <div class="info-image">
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=1000" alt="Hardware Components">
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Computer Hardware Knowledge Hub</p>
-        <span>By Chitipat && Wanchai && Satayu</span>
+        <div class="footer-content">
+            <p>&copy; 2026 Computer Hardware Knowledge Hub</p>
+            <span>Created by: Chitipat & Wanchai & Satayu</span>
+        </div>
     </footer>
 
 </body>
-
 </html>
