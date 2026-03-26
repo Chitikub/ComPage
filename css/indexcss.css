@@ -1,7 +1,7 @@
-/* --- Minimal System Variables --- */
+
 :root {
   --primary: #007aff;
-  --bg: #ffffff;
+  --bg: # ;
   --gray-light: #f5f5f7;
   --text-main: #1d1d1f;
   --text-sub: #86868b;
@@ -9,7 +9,6 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Global Reset --- */
 * {
   margin: 0;
   padding: 0;
@@ -24,18 +23,17 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Navigation (ล็อคไว้ด้านบนให้เหมือนกันทุกหน้า) --- */
+/* --- Nav --- */
 nav {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   height: 64px;
   display: flex;
-  align-items: center;
+    align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -49,7 +47,6 @@ nav {
 }
 
 .logo a {
-  font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-main);
   text-decoration: none;
@@ -70,7 +67,6 @@ nav ul li a {
   color: var(--text-sub);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: var(--transition);
 }
 
 nav ul li a:hover,
@@ -78,7 +74,7 @@ nav ul li a.active {
   color: var(--primary);
 }
 
-/* --- Hero & Page Headers --- */
+/* --- Hero Section --- */
 .hero {
   height: 80vh;
   background: var(--gray-light);
@@ -89,34 +85,12 @@ nav ul li a.active {
   margin-top: 64px; /* กันโดน nav ทับ */
 }
 
-.sub-header,
-.page-header {
-  padding: 120px 20px 40px;
-  text-align: center;
-  background: var(--bg);
-}
-
 h1,
 h2 {
   font-weight: 600;
   letter-spacing: -0.02em;
 }
-.hero h1 {
-  font-size: 3.5rem;
-}
-.sub-header h2 {
-  font-size: 2.5rem;
-}
-/* --- New Split Layout Hero Section --- */
-.hero-section {
-    background-color: var(--gray-light);
-    min-height: 80vh;
-    padding: 100px 20px 60px;
-    margin-top: 64px; /* กันโดน nav ทับ */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .hero-container {
     max-width: 1100px;
@@ -152,7 +126,9 @@ h2 {
 
 .hero-btns {
     display: flex;
-    gap: 16px;
+    align-items: center;
+    justify-content:center;
+    gap: 20px;
 }
 
 .hero-image {
@@ -175,32 +151,9 @@ h2 {
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Responsive (มือถือ) สำหรับ Hero ใหม่ --- */
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    .hero-text p {
-        font-size: 1rem;
-    }
-    .hero-btns {
-        justify-content: center;
-    }
-    .hero-image {
-        justify-content: center;
-        width: 100%;
-    }
-    .hero-image img {
-        max-width: 100%;
-    }
-}
 
-/* --- Layout System --- */
+
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -213,7 +166,7 @@ h2 {
   gap: 24px;
 }
 
-/* --- Minimal Card Style --- */
+/* ---  Card  --- */
 .card {
   background: var(--gray-light);
   border-radius: 20px;
@@ -259,7 +212,7 @@ h2 {
   transform: scale(1.02);
 }
 
-/* --- Info Section (หน้า Index) --- */
+/* --- Info Section  --- */
 .info-section {
   display: flex;
   align-items: center;
@@ -287,40 +240,6 @@ footer {
   text-align: center;
 }
 
-.footer-links a {
-  color: var(--text-sub);
-}
-
-/* --- Responsive (มือถือ) --- */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    padding: 10px;
-  }
-  nav {
-    height: auto;
-    position: relative;
-  }
-  .hero {
-    height: auto;
-    padding: 80px 20px;
-    margin-top: 0;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  .info-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav ul {
-    margin-top: 15px;
-  }
-  nav ul li {
-    margin: 0 10px;
-  }
-}
-
 footer a{
   color: var(--text-sub);
   text-decoration: none;
@@ -330,4 +249,47 @@ footer a{
 
 footer a:hover {
   color: var(--text-sub);
+}
+
+/* --- Responsive  --- */
+
+@media (max-width: 768px) {
+    nav{
+      display: none;
+    }
+    .hero-container {
+      margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .hero-btns {
+        justify-content: center;
+    }
+    .hero-image {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .hero-image img {
+        max-width: 60%;
+    }
+    .card {
+        padding: 24px;
+    }
+    .info-section {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .info-image{
+        width: 60%;
+    }
 }

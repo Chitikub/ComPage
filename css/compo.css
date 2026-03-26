@@ -1,4 +1,4 @@
-/* --- System Variables --- */
+
 :root {
     --primary: #007aff;
     --primary-dark: #0056b3;
@@ -11,7 +11,7 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Global Reset --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +36,6 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -96,7 +95,6 @@ nav ul li a.active {
     color: var(--text-main);
 }
 
-/* --- Grid Container --- */
 .container {
     max-width: 1100px;
     margin: 40px auto 80px;
@@ -109,7 +107,7 @@ nav ul li a.active {
     gap: 25px;
 }
 
-/* --- Component Cards --- */
+/* ---  Cards --- */
 .card {
     background: var(--card-bg);
     border-radius: 20px;
@@ -243,9 +241,13 @@ footer span {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+    .card{
+        padding: 15px;
+        margin: 0 50px 30px;
+    }
     .sub-header h2 { font-size: 1.8rem; }
     .nav-container { flex-direction: column; padding: 10px; }
-    nav { height: auto; position: relative; }
+    nav { display: none; }
     nav ul { margin-top: 10px; }
     nav ul li { margin: 0 10px; }
 }
