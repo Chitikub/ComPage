@@ -1,57 +1,62 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Equipment - PC Master</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+<!DOCTYPE html> <!-- ประกาศให้เบราว์เซอร์รู้ว่านี่คือเอกสาร HTML5 -->
+<html lang="th"> <!-- เปิดแท็ก HTML และกำหนดภาษาของเนื้อหาหลักเป็นภาษาไทย (th) -->
+<head> <!-- ส่วนการตั้งค่าหน้าเว็บ (ไม่แสดงผลในเนื้อหาหลัก) -->
+    <meta charset="UTF-8"> <!-- กำหนดให้อ่านตัวอักษรเป็น UTF-8 (เพื่อรองรับภาษาไทย) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ตั้งค่าให้หน้าเว็บแสดงผลพอดีกับหน้าจอมือถือ/แท็บเล็ต (Responsive) -->
+    <title>Computer Equipment - PC Master</title> <!-- กำหนดชื่อบนแท็บของเว็บเบราว์เซอร์ -->
+    <link rel="stylesheet" href="computer.equipment.css"> <!-- ลิงก์ไปยังไฟล์ CSS ที่ใช้ปรับแต่งหน้าตาของเว็บนี้โดยเฉพาะ -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet"> <!-- เรียกใช้ตัวอักษร (Font) Kanit จาก Google Fonts -->
 </head>
-<body>
+<body> 
 
-    <nav>
-        <div class="nav-container">
-            <div class="logo"><a href="index.html">MR.<span>Master</span></a></div>
-            <ul>
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="computer.equipment.html" class="active">อุปกรณ์คอมพิวเตอร์</a></li>
-                <li><a href="components.html">ส่วนประกอบภายใน</a></li>
-                <li><a href="connect.html">การเชื่อมต่อ</a></li>
-                <li><a href="learning.html" >แหล่งเรียนรู้</a></li>
+    <nav> <!-- กล่องแถบนำทาง (Navbar) ด้านบนสุด -->
+        <div class="nav-container"> <!-- กล่องคุมความกว้างของเมนู ไม่ให้แถบเมนูกว้างจนติดขอบจอ -->
+            <div class="logo"><a href="index.html">MR.<span>Master</span></a></div> <!-- ส่วนโลโก้ มีลิงก์กลับไปหน้าแรก (index.html) -->
+            <ul> <!-- กล่องสำหรับรายการเมนูต่างๆ (Unordered List) -->
+                <li><a href="index.html">หน้าแรก</a></li> <!-- เมนูลิงก์ไปหน้าแรก -->
+                <li><a href="computer.equipment.html" class="active">อุปกรณ์คอมพิวเตอร์</a></li> <!-- เมนูหน้าปัจุบัน ใส่ class="active" เพื่อเปลี่ยนสีให้รู้ว่าอยู่หน้านี้ -->
+                <li><a href="components.html">ส่วนประกอบภายใน</a></li> <!-- เมนูลิงก์ไปหน้าส่วนประกอบ -->
+                <li><a href="connect.html">การเชื่อมต่อ</a></li> <!-- เมนูลิงก์ไปหน้าการเชื่อมต่อ -->
+                <li><a href="learning.html" >แหล่งเรียนรู้</a></li> <!-- เมนูลิงก์ไปหน้าแหล่งเรียนรู้ -->
             </ul>
         </div>
     </nav>
 
-    <div class="sub-header">
-        <h2>อุปกรณ์คอมพิวเตอร์และอุปกรณ์ต่อพ่วง</h2>
+    <div class="sub-header"> <!-- กล่องสำหรับแสดงหัวข้อใหญ่ของหน้าเพจ (เว้นระยะลงมาจากเมนู) -->
+        <h2>อุปกรณ์คอมพิวเตอร์และอุปกรณ์ต่อพ่วง</h2> <!-- หัวข้อหรือชื่อเรื่องของหน้าเว็บ -->
     </div>
 
-    <main class="container">
-        <div class="grid">
+    <main class="container"> <!-- กล่องครอบเนื้อหาหลักทั้งหมด จัดวางให้เนื้อหาอยู่กึ่งกลางจอ -->
+        <div class="grid"> <!-- ประกาศใช้กล่องนี้จัดเรียงแบบ Grid (จัดของเป็นช่องตารางอัตโนมัติ) -->
+            
+            <!-- การ์ดรายการที่ 1: Monitor -->
+            <!-- เมื่อผู้ใช้คลิก (onclick) ให้เรียกฟังก์ชัน showInfo() ในตัว Javascript โดยส่งคำว่า 'monitor' ไปประมวลผล -->
             <div class="card" onclick="showInfo('monitor')">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1470" alt="Modern Monitor0" alt="Monitor">
+                <div class="card-img"> <!-- กล่องส่วนที่แสดงรูปภาพ -->
+                    <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1470" alt="Monitor"> <!-- ดึงรูปจาก URL อินเทอร์เน็ตมาแสดง -->
                 </div>
-                <div class="card-body">
-                    <span class="badge">Output Device</span>
-                    <h3>Monitor (หน้าจอ)</h3>
-                    <p>แสดงผลภาพจากคอมพิวเตอร์ มีหลายขนาดและเทคโนโลยี</p>
+                <div class="card-body"> <!-- กล่องส่วนที่เป็นข้อความรายละเอียดใต้รูป -->
+                    <span class="badge">Output Device</span> <!-- ป้ายกำกับเล็กๆ บอกประเภทว่าเป็น "อุปกรณ์แสดงผล" -->
+                    <h3>Monitor (หน้าจอ)</h3> <!-- ชื่ออุปกรณ์ -->
+                    <p>แสดงผลภาพจากคอมพิวเตอร์ มีหลายขนาดและเทคโนโลยี</p> <!-- คำอธิบายสั้นๆ -->
                 </div>
             </div>
 
+            <!-- การ์ดรายการที่ 2: Keyboard -->
             <div class="card" onclick="showInfo('keyboard')">
-                <div class="card-img">
+                <div class="card-img"> <!-- กล่องภาพคีย์บอร์ด -->
                     <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=1470" alt="Keyboard">
                 </div>
                 <div class="card-body">
-                    <span class="badge">Input Device</span>
+                    <span class="badge">Input Device</span> <!-- ป้ายกำกับบอกประเภทว่าเป็น "อุปกรณ์นำเข้าข้อมูล" -->
                     <h3>Keyboard (คีย์บอร์ด)</h3>
                     <p>อุปกรณ์สำหรับป้อนข้อมูลตัวอักษรและคำสั่งต่างๆ</p>
                 </div>
             </div>
 
+            <!-- การ์ดรายการที่ 3: Mouse -->
             <div class="card" onclick="showInfo('mouse')">
-                <div class="card-img">
+                <div class="card-img"> <!-- รูปภาพเมาส์ -->
                     <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=1470" alt="Mouse">
                 </div>
                 <div class="card-body">
@@ -61,8 +66,9 @@
                 </div>
             </div>
 
+            <!-- การ์ดรายการที่ 4: Microphone -->
             <div class="card" onclick="showInfo('microphone')">
-                <div class="card-img">
+                <div class="card-img"> <!-- รูปภาพไมค์ -->
                     <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1470" alt="Microphone">
                 </div>
                 <div class="card-body">
@@ -72,7 +78,8 @@
                 </div>
             </div>
 
-            <div class="card" onclick="showInfo('webcam')">
+            <!-- การ์ดรายการที่ 5: Webcam -->
+            <div class="card" onclick="showInfo('webcam')"> <!-- ส่งคำอ้างอิงของอ็อบเจ็กต์ 'webcam' ไปแสดง -->
                 <div class="card-img">
                     <img src="https://www.ec-mall.com/media/catalog/product/cache/9e060b1b3b357cb140b27d2b51b02644/L/o/Logitech-BRIO-Ultra-HD-Pro-Webcam-1.webp" alt="Webcam">
                 </div>
@@ -83,6 +90,7 @@
                 </div>
             </div>
 
+            <!-- การ์ดรายการที่ 6: Audio (ลำโพงหูฟัง) -->
             <div class="card" onclick="showInfo('audio_out')">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1470" alt="Audio">
@@ -94,6 +102,7 @@
                 </div>
             </div>
 
+            <!-- การ์ดรายการที่ 7: Printer -->
             <div class="card" onclick="showInfo('printer')">
                 <div class="card-img">
                     <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=1470" alt="Printer">
@@ -107,75 +116,90 @@
         </div>
     </main>
 
-    <div id="infoModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div id="modal-body"></div>
+    <!-- หน้าต่างป๊อปอัป (Modal) จะโชว์ขึ้นมาเมื่อคลิกการ์ด (ปกติจะซ่อนตัวเอาไว้ตามคำสั่งใน CSS) -->
+    <div id="infoModal" class="modal"> <!-- ให้ ID เป็น infoModal เพื่อเอาไว้ให้ Javascript เรียกใช้ -->
+        <div class="modal-content"> <!-- กล่องกรอบสีขาวเนื้อหาด้านในป๊อปอัป -->
+            <span class="close-btn" onclick="closeModal()">&times;</span> <!-- ปุ่มคำสั่งตัวกากบาท เมื่อคลิกจะเข้าฟังก์ชัน closeModal() สร้างตัว X ด้วยค่า &times; -->
+            <div id="modal-body"></div> <!-- พื้นที่ว่างเตรียมไว้สำหรับรอรับเนื้อหา (รูป ชื่อ คำอธิบาย) ที่จะดึงมาจาก Javascript ตามตัวที่เราคลิก -->
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Computer Hardware Knowledge Hub</p>
-        <span>By Chitipat && Wanchai && Satayu</span>
+    <footer> <!-- ส่วนท้ายทิ้งท้ายของเว็บ (พวกลิขสิทธิ์) -->
+        <p>&copy; 2026 Computer Hardware Knowledge Hub</p> <!-- พิมพ์เครื่องหมายสัญลักษณ์ลิขสิทธิ์ด้วย &copy; -->
+        <span>By Chitipat && Wanchai && Satayu</span> <!-- เครดิตผู้สร้างเว็บไซต์ -->
     </footer>
 
+    <!-- ส่วนของการเขียนภาษาจาวาสคริปต์ (JavaScript) เพื่ออ้างอิงและทำระบบโต้ตอบเวลากดคลิกการ์ด -->
     <script>
+        // สร้างตัวแปร data ประเภท Object (เก็บข้อมูลแบบ Dictionary/อ็อบเจ็กต์)
+        // ใช้เก็บรายละเอียดเจาะลึกของอุปกรณ์แต่ละคีย์เพื่อเตรียมเอาไปใส่หน้าป๊อปอัป
         const data = {
-            'monitor': {
-                title: 'Monitor (จอภาพ)',
-                img: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1470" alt="Modern Monitor',
-                desc: 'อุปกรณ์แสดงผลหลักที่เปลี่ยนสัญญาณไฟฟ้าเป็นภาพ ปัจจุบันมีความละเอียดสูงระดับ 4K และเทคโนโลยีหน้าจอแบบ IPS ที่ให้สีสันสมจริง'
+            'monitor': { // ข้อมูลของไอดีคีย์ 'monitor'
+                title: 'Monitor (จอภาพ)', // เก็บชื่อเต็ม
+                img: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=1470', // เก็บรูปลิงก์ใหญ่
+                desc: 'อุปกรณ์แสดงผลหลักที่เปลี่ยนสัญญาณไฟฟ้าเป็นภาพ ปัจจุบันมีความละเอียดสูงระดับ 4K และเทคโนโลยีหน้าจอแบบ IPS ที่ให้สีสันสมจริง' // เก็บรายละเอียดบรรยาย
             },
-            'keyboard': {
+            'keyboard': { // ข้อมูลคีย์บอร์ด
                 title: 'Keyboard (คีย์บอร์ด)',
                 img: 'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=1470',
                 desc: 'อุปกรณ์ป้อนข้อมูลตัวอักษรและชุดคำสั่ง มีทั้งแบบปกติและแบบ Mechanical ที่ออกแบบมาเพื่อการพิมพ์ที่รวดเร็วและทนทาน'
             },
-            'mouse': {
+            'mouse': { // ข้อมูลเมาส์
                 title: 'Mouse (เมาส์)',
                 img: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?q=80&w=1470',
                 desc: 'อุปกรณ์ชี้ตำแหน่งที่ช่วยให้การสั่งงานคอมพิวเตอร์สะดวกขึ้น มีทั้งระบบใช้สายและไร้สาย รวมถึงเมาส์สำหรับเล่นเกม (Gaming Mouse)'
             },
-            'microphone': {
+            'microphone': { // ข้อมูลไมค์
                 title: 'Microphone (ไมโครโฟน)',
                 img: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1470',
                 desc: 'อุปกรณ์รับสัญญาณเสียงเปลี่ยนเป็นข้อมูลดิจิทัล เหมาะสำหรับการประชุมออนไลน์ การแคสเกม หรือการทำ Podcast'
             },
-            'webcam': {
+            'webcam': { // ข้อมูลกล้องเว็บแคม
                 title: 'Webcam (เว็บแคม)',
                 img: 'https://www.ec-mall.com/media/catalog/product/cache/9e060b1b3b357cb140b27d2b51b02644/L/o/Logitech-BRIO-Ultra-HD-Pro-Webcam-1.webp',
                 desc: 'กล้องบันทึกวิดีโอแบบพกพาที่ช่วยให้สามารถสื่อสารแบบเห็นหน้าได้ทั่วโลก มีความละเอียดตั้งแต่ HD ไปจนถึง 4K'
             },
-            'audio_out': {
+            'audio_out': { // ข้อมูลระบบเสียง
                 title: 'Speakers & Headphones',
                 img: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1470',
                 desc: 'อุปกรณ์ที่ทำหน้าที่เปลี่ยนข้อมูลเสียงเป็นคลื่นเสียง ลำโพงเหมาะสำหรับการฟังในพื้นที่กว้าง ส่วนหูฟังให้ความเป็นส่วนตัวสูง'
             },
-            'printer': {
+            'printer': { // ข้อมูลปริ้นเตอร์
                 title: 'Printer (เครื่องพิมพ์)',
                 img: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=1470',
                 desc: 'อุปกรณ์แสดงผลในรูปแบบเอกสาร มีทั้งระบบ Inkjet (พ่นหมึก) และ Laser (ความร้อน) ตามลักษณะการใช้งาน'
             }
         };
 
+        // ฟังก์ชันสร้างป๊อปอัปให้แสดงขึ้นมา (รับค่า id อุปกรณ์จากการ์ดที่เราคลิก)
         function showInfo(id) {
-            const modal = document.getElementById('infoModal');
-            const body = document.getElementById('modal-body');
+            const modal = document.getElementById('infoModal'); // ระบุอ้างอิงไปถึงกล่อง <div> ที่ชื่อไอดีว่า infoModal
+            const body = document.getElementById('modal-body'); // ระบุอ้างอิงไปถึงพื้นที่สีขาวในป๊อปอัป
+
+            // สร้างโค้ด HTML ใหม่ (เครื่องหมาย ` ช่วยให้พิมพ์ข้ามบรรทัดได้) 
+            // โดยดึงเอาข้อมูลรหัส img, title และ desc จากข้อมูลชุดด้านบนมาแทรกใส่ตัวแปร แล้วเทเข้าไปในหน้าเว็บจริงๆ
             body.innerHTML = `
-                <img src="${data[id].img}" class="modal-img" style="max-height: 300px; object-fit: cover;">
-                <h2>${data[id].title}</h2>
-                <p style="text-align:left; margin-top:15px; line-height:1.8;">${data[id].desc}</p>
+                <img src="${data[id].img}" class="modal-img"> <!-- วาดรูปภาพและเรียก class="modal-img" จาก CSS มาปรับขนาด -->
+                <h2>${data[id].title}</h2> <!-- วาดชื่ออุปกรณ์บรรทัดที่สอง -->
+                <p class="modal-desc">${data[id].desc}</p> <!-- วาดคำอธิบายบรรทัดที่สามและเรียก class="modal-desc" จาก CSS -->
             `;
-            modal.style.display = "flex";
+            // เปลี่ยนลักษณะการแสดงผล CSS ของโครงสร้าง Modal จาก 'none' (ซ่อนไว้) ให้กลายเป็น 'flex' (แสดงออกมากึ่งกลาง)
+            modal.style.display = "flex"; 
         }
 
+        // ฟังก์ชันยกเลิก / ปิดการทำงานของป๊อปอัป
         function closeModal() {
+            // เมื่อถูกเรียกใช้งาน จะสั่งให้ Modal นั้นกลับไปมีสถานะ display เป็น "none" (เก็บซ่อนตัวลงไปเหมือนเดิม)
             document.getElementById('infoModal').style.display = "none";
         }
 
+        // ดักจับเหตุการณ์ทุกครั้งที่ผู้ใช้คลิกปุ่มเมาส์ลงบนหน้าจอ
         window.onclick = function(event) {
-            const modal = document.getElementById('infoModal');
-            if (event.target == modal) closeModal();
+            const modal = document.getElementById('infoModal'); 
+            // เช็คว่าจุดที่ผู้ใช้คลิกลงไปนั้น (event.target) ตอนเปิดหน้าต่างอยู่ ตรงกับบริเวณเงาดำๆ ข้างหลังเนื้อหาป๊อปอัป (modal) หรือไม่
+            if (event.target == modal) { 
+                closeModal(); // ถ้าคลิกเข้าเงาดำขอบๆ ให้เรียกคำสั่งเก็บซ่อนป๊อปอัปอัตโนมัติ (ไม่ต้องกดแต่กากบาทอย่างเดียว)
+            }
         }
     </script>
 </body>
