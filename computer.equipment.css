@@ -236,9 +236,9 @@ footer {
   height: 40px; /* ความสูงปุ่ม */
   background-color: rgba(255, 255, 255, 0.9); /* สีพื้นหลังขาวโปร่งแสง */
   border-radius: 50%; /* ทำให้กลม */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* เรียกใช้ Flexbox เพื่อช่วยจัดองค์ประกอบให้อยู่กึ่งกลาง */
+  align-items: center; /* จัดตัวกากบาทให้อยู่ตรงกลางของปุ่มในแนวตั้ง */
+  justify-content: center; /* จัดตัวกากบาทให้อยู่ตรงกลางของปุ่มในแนวนอน */
   font-size: 24px; /* ขนาดกากบาท */
   cursor: pointer; /* เปลี่ยนเมาส์เป็นนิ้วชี้ */
   color: var(--text-main); /* กากบาทสีเข้ม */
