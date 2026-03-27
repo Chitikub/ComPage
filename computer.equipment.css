@@ -229,17 +229,29 @@ footer {
 
 /* ปุ่มกากบาทมุมขวาเพื่อปิด Modal */
 .close-btn {
-  position: absolute; /* จัดตำแหน่งแบบหลุดจากวงโคจร ยึดตามกล่องของรูป (.modal-content) แทน */
-  right: 25px; /* ชิดขวาที่ระยะ 25px จาดขอบกล่อง */
+  position: absolute; /* จัดตำแหน่งแบบหลุดจากวงโคจร ยึดตามกล่อง (.modal-content) แทน */
+  right: 20px; /* ชิดขวาที่ระยะ 20px จากขอบกล่อง */
   top: 20px; /* ชิดบน 20px */
-  font-size: 28px; /* ขนาดตัวอักษรปุ่มใหญ่เพื่อให้จิ้มง่าย */
-  cursor: pointer; /* เมื่อเมาส์ไปชี้จะเปลี่ยนเป็นรูปนิ้วมือ แทนรูปเมาส์ปกติ สร้างจุดบอกใบ้ว่าคลิกได้ */
-  color: var(--text-sub); /* ปุ่มกากบาทสีเทาอ่อน */
+  width: 40px; /* ความกว้างปุ่ม */
+  height: 40px; /* ความสูงปุ่ม */
+  background-color: rgba(255, 255, 255, 0.9); /* สีพื้นหลังขาวโปร่งแสง */
+  border-radius: 50%; /* ทำให้กลม */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* ขนาดกากบาท */
+  cursor: pointer; /* เปลี่ยนเมาส์เป็นนิ้วชี้ */
+  color: var(--text-main); /* กากบาทสีเข้ม */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ปุ่มลอยขึ้นมาชัดเจน */
+  z-index: 10; /* ให้อยู่เหนือรูปภาพแน่นอน */
+  transition: var(--transition); /* แอนิเมชันเวลา hover */
 }
 
 /* อาการตอนรูดเมาส์ไปชี้กากบาทปิด Modal */
 .close-btn:hover {
-  color: var(--text-main); /* ขยับสีเข้มขึ้นจากเทากลายเป็นสายดำ */
+  background-color: var(--primary); /* เปลี่ยนพื้นหลังเป็นสีหลัก */
+  color: #ffffff; /* เปลี่ยนสีกากบาทเป็นขาว */
+  transform: scale(1.1); /* ขยายใหญ่ขึ้นเล็กน้อยตอนชี้เมาส์ */
 }
 
 /* --- Responsive Design (รองรับหน้าจอมือถือและแท็บเล็ต) --- */
@@ -279,8 +291,11 @@ footer {
     padding: 20px;
   }
   .close-btn {
-    top: 10px;
+    top: 15px;
     right: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
   }
 }
 
